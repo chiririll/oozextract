@@ -542,7 +542,7 @@ impl LeviathanMode for LeviathanModeLamSub {
         }
 
         self.assert_ne(litlen, 0)?;
-        self.assert_lt(litlen, match_zone_end - *dst)?;
+        self.assert_le(litlen, match_zone_end - *dst)?;
         litlen -= 1;
 
         let lam_byte = core
